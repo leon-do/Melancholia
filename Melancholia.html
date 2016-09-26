@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+    <style>
+		i{
+			cursor:default;
+			font-size:48px;
+			color:grey;
+				width:100%;
+				text-align:center;
+			position:absolute;
+			top: 35%;
+		}
+		#name{
+			font-family: monospace;
+			width:100%;
+			text-align:center;
+			position:absolute;
+			top: 42%;
+			}
+    </style>
+</head>
+
+<body>
+	<i id="thumb" class="fa fa-meh-o" onclick="thumbs_down()" style="font-size:48px"></i>
+	<p id="name">click to understand melancholia.</p>
+</body>
+
+</html> 
+
+
+<script>
+function thumbs_down(){
+	document.getElementById("thumb").className = "fa fa-smile-o";
+	var time = Math.floor((Math.random()*3000)+100) 
+		//random num between 100 - 3000
+	setTimeout(thumbs_up, time);
+}
+function thumbs_up(){
+	document.getElementById("thumb").className = "fa fa-meh-o";
+}
+
+</script>
